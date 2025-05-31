@@ -1,23 +1,44 @@
+import "../src/form.css"
+
 function Form() {
 
     function signUpForm(formData) {
         const email = formData.get("email")
         const password = formData.get("password")
+        const text = formData.get("description")
         console.log(email)
         console.log(password)
+        console.log(text)
     }
     return (
         <section>
             <h1>Signup Form</h1>
             <form action={signUpForm}>
                 <label htmlFor="email">Email:</label>
-                <input type="email" name="email" placeholder="ayomide@gmail.com" id="email"/>
+                <input type="email" name="email" defaultValue="ayomide@gmail.com" placeholder="ayomide@gmail.com" id="email"/>
                 <br/>
 
                 <label htmlFor="password">Password:</label>
-                <input type="password" name="password" placeholder="Enter password" id="password" />
+                <input type="password" name="password" defaultValue="password123" placeholder="Enter password" id="password" />
                 <br/>
 
+                <label htmlFor="description">Description: </label>
+                <textarea id="description" name="description" defaultValue="Ayomide is a good boy!"></textarea>
+
+                <fieldset>
+                    <label>
+                        <input type="radio" name="employmentStatus" />
+                        Label Text
+                    </label>
+                    <label>
+                        <input type="radio" name="employmentStatus" />
+                        Label Text
+                    </label>
+                    <label>
+                        <input type="radio" name="employmentStatus" />
+                        Label Text
+                    </label>
+                </fieldset>
                 <button>Submit</button>
             </form>
         </section>
