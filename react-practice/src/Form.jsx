@@ -3,12 +3,9 @@ import "../src/form.css"
 function Form() {
 
     function signUpForm(formData) {
-        const email = formData.get("email")
-        const password = formData.get("password")
-        const text = formData.get("description")
-        console.log(email)
-        console.log(password)
-        console.log(text)
+        const data = Object.fromEntries(formData)
+        // const dietaryData = data.dietaryRestrictions
+        console.log(dietaryData)
     }
     return (
         <section>
@@ -26,19 +23,48 @@ function Form() {
                 <textarea id="description" name="description" defaultValue="Ayomide is a good boy!"></textarea>
 
                 <fieldset>
+                    <legend>Employment Status:</legend>
                     <label>
-                        <input type="radio" name="employmentStatus" />
-                        Label Text
+                        <input type="radio" name="employmentStatus" value="Unemployed"/>
+                        Unemployed
                     </label>
                     <label>
-                        <input type="radio" name="employmentStatus" />
-                        Label Text
+                        <input type="radio" name="employmentStatus" value="Part-time"/>
+                        Part-time
                     </label>
                     <label>
-                        <input type="radio" name="employmentStatus" />
-                        Label Text
+                        <input type="radio" name="employmentStatus" defaultChecked="true" value="Full-time" />
+                        Full-time
                     </label>
                 </fieldset>
+
+                <fieldset>
+                    <legend>Dietary restrictions:</legend>
+                    <label>
+                        <input type="checkbox" name="dietaryRestrictions" value="kosher"/>
+                        Kosher
+                    </label>
+                    <label>
+                        <input type="checkbox" name="dietaryRestrictions" value="vegan"/>
+                        Vegan
+                    </label>
+                    <label>
+                        <input type="checkbox" name="dietaryRestrictions" value="glutten-free" defaultChecked="true" />
+                        Glutten-free
+                    </label>
+                </fieldset>
+
+                <label htmlFor="favColour">What is your Favourite Colour?</label>
+                <select id="favColour" name="favColour" required>
+                    <option value="">-- Choose a Colour --</option>
+                    <option value="red">Red</option>
+                    <option value="orange">Orange</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="green">Green</option>
+                    <option value="blue">Blue</option>
+                    <option value="indigo">Indigo</option>
+                    <option value="violet">Violet</option>
+                </select>
                 <button>Submit</button>
             </form>
         </section>
