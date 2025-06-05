@@ -4,8 +4,9 @@ function Form() {
 
     function signUpForm(formData) {
         const data = Object.fromEntries(formData)
-        // const dietaryData = data.dietaryRestrictions
-        console.log(dietaryData)
+        const dietaryRestrictions = formData.getAll("dietaryRestrictions")
+        const allData = {...data, dietaryRestrictions}
+        console.log(allData)
     }
     return (
         <section>
@@ -56,7 +57,7 @@ function Form() {
 
                 <label htmlFor="favColour">What is your Favourite Colour?</label>
                 <select id="favColour" name="favColour" required>
-                    <option value="">-- Choose a Colour --</option>
+                    {/* <option value="">-- Choose a Colour --</option> */}
                     <option value="red">Red</option>
                     <option value="orange">Orange</option>
                     <option value="yellow">Yellow</option>
