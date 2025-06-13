@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 
-body {
+/* body {
   margin: 0;
   font-family: 'Inter', sans-serif;
   background-color: #262626;
@@ -37,9 +37,9 @@ main > .value {
   font-size: 2rem;
   font-weight: bold;
   cursor: pointer;
-}
+} */
 
-/* body {
+body {
   margin: 0;
   font-family: 'Inter', sans-serif;
   background-color: #262626;
@@ -103,4 +103,4 @@ main > .value {
 .minus {
   margin-right: -20px;
   z-index: 1;
-} */
+}

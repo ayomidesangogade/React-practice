@@ -1,5 +1,5 @@
 import React from "react"
-import "./Joke.css"
+// import "./Joke.css"
 
 export default function Joke(props) {
     const [isShown, setIsShown] = React.useState(false)

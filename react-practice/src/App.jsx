@@ -6,6 +6,7 @@ import Form from "./Form"
 import Joke from "./Joke"
 import Jokes from "./Jokes"
 import Conditional from "./CondRenderChallenge"
+import Avatar from "./Avatar"
 
 function App() {
   const data = Jokes.map(joke => <Joke key={joke.id} {...joke} />)
@@ -13,7 +14,7 @@ function App() {
     // <>
     //   {data}
     // </>
-    <Conditional />
+    <Avatar />
   )
 }
 

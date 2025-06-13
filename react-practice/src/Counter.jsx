@@ -1,4 +1,5 @@
 import React from "react"
+import Count from "./components/Count"
 
 function Counter() {
     const [count, setCount] = React.useState(0)
@@ -20,7 +21,7 @@ function Counter() {
     <h1>How many times will Bob say "state" in this section?</h1>
     <div className="counter">
         <button className="minus" onClick={substract} aria-label="Decrease count">–</button>
-        <h2 className="count">{count}</h2>
+        <Count count={count} />
         <button className="plus" onClick={add} aria-label="Increase count">+</button>
     </div>
     </main>
