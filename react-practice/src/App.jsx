@@ -7,6 +7,7 @@ import Joke from "./Joke"
 import Jokes from "./Jokes"
 import Conditional from "./CondRenderChallenge"
 import Avatar from "./Avatar"
+import Pads from "./Pads.jsx"
 
 function App() {
   const data = Jokes.map(joke => <Joke key={joke.id} {...joke} />)
@@ -14,7 +15,7 @@ function App() {
     // <>
     //   {data}
     // </>
-    <Avatar />
+    <Pads />
   )
 }
 
