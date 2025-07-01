@@ -1,10 +1,10 @@
 import avatar from "./Icon/user.png"
 
-export default function Header(props) {
+export default function Header({userName}) {
     return (
         <header>
             <img src={avatar} />
-            <p>{props.userName}</p>
+            <p>{userName}</p>
         </header>
     )
 }

@@ -1,7 +1,7 @@
-export default function Body(props) {
+export default function Body({userName}) {
     return (
         <section>
-            <h1>Welcome back, {props.userName}!</h1>
+            <h1>Welcome back, {userName}!</h1>
         </section>
     )
 }
