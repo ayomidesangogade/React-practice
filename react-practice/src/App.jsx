@@ -15,7 +15,7 @@ function App() {
     // <>
     //   {data}
     // </>
-    <Avatar />
+    <Pads />
   )
 }
 
