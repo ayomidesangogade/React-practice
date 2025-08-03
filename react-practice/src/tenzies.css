@@ -1,0 +1,99 @@
+/* Base Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #051f2e;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+/* Outer container */
+.container {
+  max-width: 600px;
+  width: 100%;
+}
+
+/* Game Box */
+.game-box {
+  background-color: #eeeeee;
+  border-radius: 10px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Title */
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+/* Instruction */
+.instruction {
+  font-size: 0.95rem;
+  color: #444;
+  margin-bottom: 1.5rem;
+}
+
+/* Dice Grid */
+.dice-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Dice Button */
+.die {
+  background-color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.die:hover {
+  background-color: #ddd;
+}
+
+/* Roll Button */
+.roll-button {
+  background-color: #6246ea;
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.roll-button:hover {
+  background-color: #3e30b5;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 400px) {
+  .die {
+    font-size: 1.2rem;
+    padding: 0.8rem;
+  }
+
+  .roll-button {
+    width: 100%;
+  }
+}
